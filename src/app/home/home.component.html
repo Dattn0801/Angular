@@ -1,1 +1,13 @@
 <p>home works!</p>
+<h2>hello {{ name }}</h2>
+<input value="{{ name }}">
+<br/>
+<br/>
+<input value="name">
+<input [value] ="name" title =" day la  {{ name }}"/>
+<input [value] ="name" [title] =" 'day la' + name"/>
+<h2 *ngIf="age >18"> old</h2>
+<h2 *ngIf="age <= 18"> young</h2>
+<button (click)="resetName()">Reset Tên</button>
+
+<input type="text" [(ngModel)]="name">
