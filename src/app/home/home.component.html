@@ -48,11 +48,11 @@
 
 
 </table>
-    tinh,thanh pho
-    <select  id="city" (change)="changeCity($event)">
-        <option *ngFor="let data of vietnamData" value="{{ data.city }}">{{ data.city }}</option>
-    </select> 
-    quan,huyen
-    <select  id="district">
-        <option *ngFor="let district of districts" value="{{ district}}">{{district}}</option>
-    </select> 
+tinh,thanh pho
+<select  id="city" (change)="changeCity($event)">
+    <option *ngFor="let data of vietnamData" value="{{ data.city }}">{{ data.city }}</option>
+</select> 
+quan,huyen
+<select  id="district">
+    <option *ngFor="let district of districts" value="{{ district}}">{{district}}</option>
+</select> 
