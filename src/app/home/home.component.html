@@ -18,11 +18,11 @@
 <ng-template #gia><h2>già quá đi</h2></ng-template> -->
 
 
-<h1>Trái cây</h1> 
-<div class="test"> 
-    <div *ngFor="let trais of traiCay;let i =index" > 
-        
-        <li>{{i+1}}.{{trais}}</li> 
+<h1>Trái cây</h1>
+<div class="test">
+    <div *ngFor="let trais of traiCay;let i =index" >
+
+        <li>{{i+1}}.{{trais}}</li>
     </div>
 </div>
 <table id="table ">
@@ -39,7 +39,7 @@
             <span [ngClass]="{'so-am':trai.gia <0}">
                 {{trai.gia | currency:"VND":"symbol-narrow":"4.2-2"}}
             </span>
-            
+
         </td>
         <td>
             <span>{{trai.haGia | onSale | uppercase}}</span>
@@ -51,8 +51,11 @@
 tinh,thanh pho
 <select  id="city" (change)="changeCity($event)">
     <option *ngFor="let data of vietnamData" value="{{ data.city }}">{{ data.city }}</option>
-</select> 
+</select>
 quan,huyen
 <select  id="district">
     <option *ngFor="let district of districts" value="{{ district}}">{{district}}</option>
-</select> 
+</select>
+
+<span>Counter ={{counter}}</span>
+<span>Counter ^ 2 ={{counterBinhPhuong}}</span>

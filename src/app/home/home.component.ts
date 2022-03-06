@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CommonService } from '../Services/common.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  public counter = 0;
+  public counterBinhPhuong = 0;
   public name = 'Dat';
   public age = 25;
   public traiCay = ['Tao', 'Cam', 'Nho', 'Quyt'];
@@ -114,11 +116,14 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private common: CommonService) {}
 
   ngOnInit(): void {
     console.log('cities = ', this.vietnamData);
     console.log('Trai Cay =', this.traiCay);
+    this.counter = this.common.counter;
+    this.counterBinhPhuong = this.common.binhPhuong(this.common.counter);
+    this.common.counter++;
   }
   public resetName(): void {
     console.log('resetName');
