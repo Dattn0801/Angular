@@ -10,6 +10,7 @@ import { OnSalePipe } from './on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WarningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
+import { HighLightDirective } from './Directives/high-light.directive';
 
 @NgModule({
   declarations: [
@@ -19,15 +20,12 @@ import { SuccessComponent } from './success/success.component';
     OnSalePipe,
     PageNotFoundComponent,
     WarningComponent,
-    SuccessComponent
+    SuccessComponent,
+    HighLightDirective,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
